@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  node:
+    build: .
+    command: python node.py --mode consensus
+    volumes:
+      - ./data:/app/data
+    ports:
+      - "8000:8000"  # API port
